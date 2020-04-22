@@ -1,0 +1,150 @@
+###Problem 1 Design
+Basic binary search credit to Udacity
+creates array one less than input number
+Checks if supplied number is greater than, equal to, or less than initialized square
+If the input matches, return the square root
+Otherwise, there is no perfect square, so return -1
+
+###Time complexity
+O(logN) with binary search
+
+###Space complexity
+O(N) - array is initialized inside function, size is dependent on input number
+
+#Problem 2
+
+###Find minimum function design
+looks for smallest value in array
+Initalizes start index to search
+Initalize end index
+create while loop that runs until start index reaches end index
+creates mid index
+grabs mid element
+checks if element is greater or less than elements next to it
+reassigns start index to half the array - binary search
+
+###Time Complexity
+O(logN) - Binary searches to find minimum value
+
+###Space Complexity
+O(1) - two variables are initialized through entire function
+
+### Rotated Array Search Function Design
+Searches rotated array for given number in given input list
+initializes start and end indices
+uses find minimum to get rotated start index in order to divide array into two subarrays with binary search structure
+If number matches new start index, return the new start index
+If number matches number at input 0 - return 0
+If 0 input is less than number, then check first part of array
+If 0 input is greater than number, then check second part of array
+
+###Time Complexity
+O(logN) - Dependent on binary search output
+
+###Space complexity
+O(1) - single variables allocated to hold values - size not dependent on input
+
+
+### Problem 3
+Mergesort function
+divide input array into two arrays
+recursively runs mergesort on divided arrays
+Reverse merge function checks if values in each array are greater or less than each other and appends each value to merged array
+feed arrays into reverse merge functions - reverses array so that the greatest values can be appended to the number slots first so they have the greatest place value in less iterations
+
+###Time complexity
+uses O(nlogn) time functions to get array data due to mergesort implementation
+
+###Space Complexity
+O(n) - merge sort with a list(array) structure takes up O(n) space
+
+Rearrange digits function
+run mergesort on input list
+calculate length of input list
+create sub arrays that are approx half length of main array - if odd number, the first array will have one more number
+create arrays by arranging subsequent digits according to their values
+
+###Time complexity is O(nlogn)
+Longest running time based on that of called mergesort
+
+###Space complexity is O(n)
+Stored array size dependent on input size, called mergesort is also O(n)
+
+#Problem 4
+Credit to GeeksforGeeks for information on Dutch National Flag Problem
+Keeps track of location of index of last ordered 0, first ordered 2
+Mid index keeps track of how many elements have been checked in array
+
+###Time complexity
+O(n) - loop dependent on input size
+
+###Space complexity
+O(n) - variable array input size included
+
+###Problem 5
+Create trie structure - credit to Udacity for tree structure
+
+###Suffixes Design
+Return suffixes - loop through all letters, if letter has is_word flag, add to suffix children array
+return all suffix children
+
+###Insert Design
+Searches for each character in each respective node
+Traverses down nodes to correctly insert letters in order
+
+###Find Design
+Looks for each character in prefix by traversing through nodes
+returns next character if all letters are found in Trie
+Otherwise returns not found
+
+###Time complexity
+###Suffixes
+O(n * m) - loops for each letter in children - recursively dives into children arrays, creating m depth
+###Insert
+0(n) - loops through input string to insert at bottom of Trie
+###Find
+O(n) -- loops through input string to find next node after prefix
+
+###Space complexity
+###Suffixes
+O(n * m) - appends to array for children - recursively dives into children arrays, creating m depth
+###Insert and Find
+O(n) - storage space dependent on size of string inputs
+
+
+###Problem 6
+Uses linear search to incrementally go through each element in array
+for each i in integer, check if value is greater than largest or less than first
+update values according to results
+
+###Time complexity
+O(n) - loop dependent on size of input array
+
+###Space complexity
+O(n)  - only two values take up space throughout operation, input is a variable list which is a large unknown input
+
+#Problem 7
+Routetrie structure credit to Udacity
+
+###Router Add handler Design
+Splits path by slashes
+inserts each new subpath into initialized trie
+
+###Time complexity
+O(n) - dependent on size of input data - string length of any size
+
+###Space complexity is O(n)
+array grows based on size of input string
+
+###Lookup Design
+Lookup looks for path in trie
+capitalizes and returns name of page
+
+###Time complexity is O(n)
+dependent on size of input data
+
+###Space complexity
+O(n) doesn't store values, but takes input data of size n
+
+
+
